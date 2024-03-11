@@ -1,5 +1,14 @@
 import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Filterek App',
+    default: 'Filterek App',
+  },
+  description: 'Filterek App dashboard',
+};
 
 export default function RootLayout({
   children,
