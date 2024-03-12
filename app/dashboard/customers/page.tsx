@@ -10,6 +10,7 @@ import {
   fetchInvoicesPages,
   fetchFilteredCustomers,
 } from '@/app/lib/data';
+import { FormattedCustomersTable } from '@/app/lib/definitions';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default async function Page({
   const currentPage = Number(searchParams?.page) || 1;
   const totalPages = await fetchInvoicesPages(query);
   const allCustomers = await fetchCustomers();
+  // const filteredCustomers = await fetchFilteredCustomers()
 
   console.log(allCustomers);
 
