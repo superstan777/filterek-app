@@ -74,6 +74,10 @@ export type FormattedCustomersTable = {
 export type CustomerField = {
   id: string;
   name: string;
+  email: string;
+  total_invoices: number;
+  total_pending: string;
+  total_paid: string;
 };
 
 export type InvoiceForm = {
